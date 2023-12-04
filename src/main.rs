@@ -1,4 +1,7 @@
-use axum::{routing::get, Router};
+use axum::{
+    routing::{get, post},
+    Router,
+};
 
 mod challenges;
 
@@ -9,7 +12,10 @@ async fn main() -> shuttle_axum::ShuttleAxum {
         .route("/", get(challenges::minus1::http_200))
         .route("/-1/error", get(challenges::minus1::http_500))
         // day 1
-        .route("/1/*ids", get(challenges::day1::cube_bits));
+        .route("/1/*ids", get(challenges::day1::cube_bits))
+        // day 4
+        .route("/4/strength", post(challenges::day4::strength))
+        .route("/4/contest", post(challenges::day4::contest));
 
     Ok(router.into())
 }
