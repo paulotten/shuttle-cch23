@@ -209,7 +209,9 @@ name = "cch23-paul"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "base64",
  "serde",
+ "serde_json",
  "shuttle-axum",
  "shuttle-runtime",
  "tokio",

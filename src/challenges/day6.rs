@@ -4,9 +4,9 @@ use serde::Serialize;
 #[derive(Serialize)]
 pub struct ElfCount {
     elf: usize,
-    #[serde(rename="elf on a shelf")]
+    #[serde(rename = "elf on a shelf")]
     elf_on_a_shelf: usize,
-    #[serde(rename="shelf with no elf on it")]
+    #[serde(rename = "shelf with no elf on it")]
     shelf_with_no_elf: usize,
 }
 
