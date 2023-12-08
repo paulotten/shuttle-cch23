@@ -20,7 +20,10 @@ async fn main() -> shuttle_axum::ShuttleAxum {
         .route("/6", post(challenges::day6::elf))
         // day 7
         .route("/7/decode", get(challenges::day7::decode))
-        .route("/7/bake", get(challenges::day7::bake));
+        .route("/7/bake", get(challenges::day7::bake))
+        // day 8
+        .route("/8/weight/:id", get(challenges::day8::weight))
+        .route("/8/drop/:id", get(challenges::day8::drop));
 
     Ok(router.into())
 }
