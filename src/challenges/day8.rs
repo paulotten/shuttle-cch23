@@ -2,7 +2,7 @@ use axum::extract::Path;
 use serde::Deserialize;
 
 #[derive(Deserialize)]
-pub struct SimplePokemon {
+struct SimplePokemon {
     #[allow(unused)]
     name: String,
     weight: u32,
